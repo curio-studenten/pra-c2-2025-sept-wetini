@@ -37,7 +37,8 @@ use App\Http\Controllers\LocaleController;
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
-    return view('pages.homepage', compact('brands'));
+    $suggestedBrand = Brand::inRandomOrder()->first();
+    return view('pages.homepage', compact('brands'))->with("suggestedBrand", $suggestedBrand);
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
