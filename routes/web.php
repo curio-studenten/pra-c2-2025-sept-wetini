@@ -28,6 +28,7 @@ Productcat:		/category/12/Computers/
 use App\Models\Brand;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\ManualController;
 use App\Http\Controllers\ProductCategoryController;
@@ -61,3 +62,7 @@ Route::post('/addView/{id}', [ViewCounterController::class, 'index'])->name('add
 
 // Generate sitemaps
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
+
+Route::get('/contact', [ContactController::class, "index"])->name("contact.index");
+
+Route::post('/contact', [ContactController::class, "send"])->name("contact.send");

@@ -2118,6 +2118,8 @@ textarea.form-control {
 
 .form-group {
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-text {
@@ -10048,4 +10050,18 @@ a.text-dark:hover, a.text-dark:focus {
     padding: 0 5px;
     color: #ccc;
     content: "/ ";
+}
+
+.error{
+    color: var(--red)
+}
+
+input[type=submit]{
+    background-color: var(--info);
+    border-color: hsl(from var(--info) h s calc(l - 5));
+    color: var(--white);
+    border-style: solid;
+    font-weight: bold;
+    padding: 5px 20px;
+    margin: 0 0 10px 0;
 }
