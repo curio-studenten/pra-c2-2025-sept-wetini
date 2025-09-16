@@ -14,16 +14,26 @@
     <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
 
 
-        @foreach ($manuals as $manual)
+    @foreach ($manuals as $manual)
 
-            @if ($manual->locally_available)
-                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-                ({{$manual->filesize_human_readable}})
-            @else
-                <a href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-            @endif
+        @if ($manual->locally_available)
+            <a onclick="trackClick({{ $manual->id }})" href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+            ({{$manual->filesize_human_readable}})
+        @else
+            <a onclick="trackClick({{ $manual->id }})" href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+    @endif
 
-            <br />
-        @endforeach
-
+    <br />
+    @endforeach
+    <script>
+        function trackClick(id) {
+            fetch("/addView/" + id, {
+                method: "post",
+                headers: {
+                    "X-CSRF-TOKEN": "{{ csrf_token() }}"
+                },
+                keepalive: true
+            });
+        }
+    </script>
 </x-layouts.app>
