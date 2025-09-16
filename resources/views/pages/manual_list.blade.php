@@ -13,7 +13,7 @@
 
     <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
 
-
+<div class="manuals-grid">
     @foreach ($manuals as $manual)
 
         @if ($manual->locally_available)
@@ -22,9 +22,9 @@
         @else
             <a class="manual-button" onclick="trackClick({{ $manual->id }})" href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
     @endif
-
-    <br />
     @endforeach
+</div>
+
     <script>
         function trackClick(id) {
             fetch("/addView/" + id, {
