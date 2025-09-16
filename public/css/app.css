@@ -10065,3 +10065,13 @@ input[type=submit]{
     padding: 5px 20px;
     margin: 0 0 10px 0;
 }
+
+.manuals-ranking{
+    width: 50%;
+    margin-bottom: 3vh;
+}
+
+.manual-ranked{
+    display: flex;
+    justify-content: space-between;
+}
