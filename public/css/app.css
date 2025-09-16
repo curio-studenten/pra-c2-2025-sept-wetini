@@ -173,6 +173,23 @@ a:not([href]):not([class]):hover {
     text-decoration: none;
 }
 
+/* Manual buttons */
+.manual-button {
+    padding: 15px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--info);
+    display: block;
+    width: 15vw;
+    color: var(--dark);
+    text-align: center;
+}
+
+.manual-button:hover {
+    background-color: var(--primary);
+    color: #000;
+}
+
 pre,
 code,
 kbd,
