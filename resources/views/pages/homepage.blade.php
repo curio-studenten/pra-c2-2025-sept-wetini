@@ -23,15 +23,6 @@
     ?>
 
     <div class="container">
-        <style>
-            .col-md-4{
-                background-color:#5a6f85;
-                color: white;
-            }
-            .col-md-4 a{
-                color: lightcyan;
-            }
-        </style>
         <!-- Example row of columns -->
         <div class="row">
 
