@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Dumping data for table `brands`
 --
 
-INSERT INTO `brands` (`id`, `name`, 'website', `created_at`, `updated_at`) VALUES
+INSERT INTO `brands` (`id`, `name`, `website`, `created_at`, `updated_at`) VALUES
 (1, 'BenQ', 'benq.com', NULL, NULL),
 (2, 'Garmin', 'garmin.com', NULL, NULL),
 (3, 'TPI Corporation', 'tpicorp.com', NULL, NULL),
