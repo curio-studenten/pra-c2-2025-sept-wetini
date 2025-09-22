@@ -22,5 +22,8 @@ return [
 'view_manual' => "Bekijk direct je handleiding",
 'view_manual_alt' => "Bekijk direct je handleiding",
 'all_brands' => "Alle merken",
+'suggested_brand' => "Aanbevolen voor jou",
+'popular_manuals' => "Meest bekeken",
+'views' => "weergaven",
 
 ];

@@ -22,5 +22,8 @@ return [
 'view_manual' => "Directly view your manual",
 'view_manual_alt' => "Directly view your manual",
 'all_brands' => "All brands",
+'suggested_brand' => "Suggested brand for you",
+'popular_manuals' => "Most viewed",
+'views' => "views",
 
 ];

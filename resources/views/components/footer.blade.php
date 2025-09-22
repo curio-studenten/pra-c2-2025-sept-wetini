@@ -1,7 +1,7 @@
 <footer>
     <div class="about-us">
-        <h3>Over ons:</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, accusantium unde vitae dignissimos nobis reiciendis assumenda aliquid amet beatae corrupti blanditiis ea molestiae inventore iste explicabo qui dolorem earum, nulla sequi sit voluptatem. Dignissimos, quis necessitatibus, minima aliquam qui veniam soluta reprehenderit, tempora maiores dolores veritatis optio repellat porro quaerat?</p>
+        <h3>{{ __("about.about_title") }}:</h3>
+        <p>{{ __("about.about_content" )}}</p>
     </div>
     <div class="contact">
         <h3>Contact:</h3>
@@ -9,10 +9,11 @@
             <li>Tel: <a href="#">12345678890</a></p>
             <li>Email: <a href="#"></a>DUMMYEMAIL@DUMMY.com</p>
         </ul>
-        <p>Om direct met ons contact op te nemen, kan dit <a href="/contact">hier</a></p>
+        <p>{!! Lang::get('about.contactform_link', [ 'url' => '/contact' ]) !!}
+        </a></p>
     </div>
     <div class="socials">
-        <h3>Socials:</h3>
+        <h3>{{ __('about.socials') }}:</h3>
         <a href="#">Facebook</a>
         <a href="#">Twitter</a>
         <a href="#">Instagram</a>

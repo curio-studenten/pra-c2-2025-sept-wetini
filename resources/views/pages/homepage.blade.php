@@ -12,7 +12,7 @@
         </x-slot:title>
     </h1>
     <div class="recommended">
-        <h3>Suggested brand for you:</h3>
+        <h3>{{ __('misc.suggested_brand') }}:</h3>
         <a href="/{{ $suggestedBrand->id }}/{{ $suggestedBrand->getNameUrlEncodedAttribute() }}/">{{ $suggestedBrand->name }}</a>
     </div>
 
