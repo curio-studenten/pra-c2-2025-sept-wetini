@@ -559,8 +559,6 @@ pre code {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 @media (min-width: 576px) {
@@ -1113,11 +1111,6 @@ pre code {
     .col-md-7 {
         flex: 0 0 58.3333333333%;
         max-width: 58.3333333333%;
-    }
-
-    .col-md-8 {
-        flex: 0 0 66.6666666667%;
-        max-width: 66.6666666667%;
     }
 
     .col-md-9 {
