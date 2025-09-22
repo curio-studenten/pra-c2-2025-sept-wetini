@@ -1,14 +1,5 @@
 
 <footer>
-    <style>
-        footer {
-        width: 99%;
-        text-align: center;
-        background-color: #343a40;
-        color: white;
-        display: flex;
-        justify-content: space-around;}
-    </style>
 	© {{ __('misc.copyright') }}
     <a href="/contact">contact</a>
 </footer>
