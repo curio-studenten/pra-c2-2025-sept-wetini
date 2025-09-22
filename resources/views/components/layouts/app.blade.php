@@ -34,14 +34,13 @@
 
         </div>
 
-        <div class="row">
-            <x-footer/>
-        </div>
-
     </div>
 
-
 </div>
+
+    <div class="row">
+            <x-footer/>
+        </div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
