@@ -13,6 +13,16 @@
 
     <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
 
+    <h2>Most viewed:</h2>
+
+<div class="manuals-ranking">
+    @foreach ($top5Manuals as $manual)
+    <div class="manual-ranked">
+        <div>{{ $manual->name }}:</div> <div>{{$manual->views}} views</div>
+    </div>
+    @endforeach
+</div>
+
 <div class="manuals-grid">
     @foreach ($manuals as $manual)
 
