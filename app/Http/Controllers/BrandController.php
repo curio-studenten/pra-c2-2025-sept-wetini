@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
+use Illuminate\Support\Str;
 use App\Models\Manual;
 
 class BrandController extends Controller
@@ -21,5 +22,14 @@ class BrandController extends Controller
             "top5Manuals" => $top5Manuals
         ]);
 
+    }
+
+    public function letterBrands($brand_letter){
+        $brands = Brand::all();
+
+        return view("pages/brand_letter", [
+            "letter" => $brand_letter,
+            "brands" => $brands,
+        ]);
     }
 }

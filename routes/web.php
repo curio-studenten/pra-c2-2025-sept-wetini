@@ -66,3 +66,6 @@ Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
 Route::get('/contact', [ContactController::class, "index"])->name("contact.index");
 
 Route::post('/contact', [ContactController::class, "send"])->name("contact.send");
+
+// Brand Letter site
+Route::get('/{brand_letter}', [BrandController::class, "letterBrands"])->name("letterBrands");
