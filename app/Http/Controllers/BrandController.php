@@ -13,7 +13,7 @@ class BrandController extends Controller
 
         $brand = Brand::findOrFail($brand_id);
         $manuals = Manual::all()->where('brand_id', $brand_id);
-        $top5Manuals = Manual::orderBy('views', "desc")->where("brand_id", $brand_id)->take(5)->get();
+        $top5Manuals = Manual::orderBy('views', "desc")->where("brand_id", $brand_id)->take(5);
 
         return view('pages/manual_list', [
             "brand" => $brand,
