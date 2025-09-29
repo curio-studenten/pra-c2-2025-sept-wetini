@@ -14,6 +14,15 @@
     <div class="recommended">
         <h3>{{ __('misc.suggested_brand') }}:</h3>
         <a href="/{{ $suggestedBrand->id }}/{{ $suggestedBrand->getNameUrlEncodedAttribute() }}/">{{ $suggestedBrand->name }}</a>
+    </div><br>
+
+    <div class="top10">
+        <h3>{{__('misc.popular_manuals') }}:</h3>
+        <ol>
+            @foreach ( $popularManuals as $manual )
+                 <li>{{ $brands->where('id', $manual->brand_id)->first()->name }}</li>
+            @endforeach
+        </ol>
     </div>
 
     <div class="container">

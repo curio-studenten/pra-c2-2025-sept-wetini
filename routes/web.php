@@ -35,12 +35,14 @@ use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\ViewCounterController;
+use App\Models\Manual;
 
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
     $suggestedBrand = Brand::inRandomOrder()->first();
-    return view('pages.homepage', compact('brands'))->with("suggestedBrand", $suggestedBrand);
+    $popularManuals = Manual::all()->sortBy('views')->take(10);
+    return view('pages.homepage', compact('brands'))->with("suggestedBrand", $suggestedBrand)->with("popularManuals", $popularManuals);
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
