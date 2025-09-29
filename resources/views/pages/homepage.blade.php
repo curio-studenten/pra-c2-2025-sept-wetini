@@ -16,45 +16,18 @@
         <a href="/{{ $suggestedBrand->id }}/{{ $suggestedBrand->getNameUrlEncodedAttribute() }}/">{{ $suggestedBrand->name }}</a>
     </div>
 
-    <?php
-    $size = count($brands);
-    $columns = 3;
-    $chunk_size = ceil($size / $columns);
-    ?>
-
     <div class="container">
-        <!-- Example row of columns -->
-        <div class="row">
+        <div class="column">
+            <?php $letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]; ?>
 
-            @foreach($brands->chunk($chunk_size) as $chunk)
-            <div class="col-md-4">
-
-                <ul>
-                    @foreach($chunk as $brand)
-
-                    <?php
-                    $current_first_letter = strtoupper(substr($brand->name, 0, 1));
-
-                    if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
-                        echo '</ul>
-						<h2><a href="/' . $current_first_letter . '">' . $current_first_letter . '</a></h2>
-						<ul>';
-                    }
-                    $header_first_letter = $current_first_letter
-                    ?>
-
-                    <li>
-                        <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
-                    </li>
-                    @endforeach
-                </ul>
-
+            <div class="row">
+                @foreach ($letters as $letter)
+                <h2><a href="{{ $letter }}">{{$letter}}</a></h2>
+                    @if ($letter != "Z")
+                    <h2>-</h2>
+                    @endif
+                @endforeach
             </div>
-            <?php
-            unset($header_first_letter);
-            ?>
-            @endforeach
-
         </div>
 
     </div>
