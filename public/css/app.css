@@ -10113,3 +10113,10 @@ input[type=submit]{
     display: flex;
     justify-content: space-between;
 }
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 40rem;
+}
