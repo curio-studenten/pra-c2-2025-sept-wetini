@@ -32,4 +32,12 @@ class BrandController extends Controller
             "brands" => $brands,
         ]);
     }
+
+    public function categories(){
+        $categories = Brand::all()->groupBy("category");
+
+        return view("pages/product_category_brands", [
+            "categories" => $categories
+        ]);
+    }
 }
