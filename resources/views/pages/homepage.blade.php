@@ -20,7 +20,7 @@
         <h3>{{__('misc.popular_manuals') }}:</h3>
         <ol>
             @foreach ( $popularManuals as $manual )
-                 <li>{{ $brands->where('id', $manual->brand_id)->first()->name }}</li>
+                 <li>{{ $brands->where('id', $manual->brand_id)->first()->name }} - {{ $manual->name }}</li>
             @endforeach
         </ol>
     </div>
