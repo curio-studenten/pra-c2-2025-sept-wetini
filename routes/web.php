@@ -72,3 +72,5 @@ Route::post('/contact', [ContactController::class, "send"])->name("contact.send"
 
 // Brand Letter site
 Route::get('/{brand_letter}', [BrandController::class, "letterBrands"])->name("letterBrands");
+
+Route::post('/switch-locale', [App\Http\Controllers\LocaleController::class, 'switch'])->name('locale.switch');

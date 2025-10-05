@@ -7,3 +7,13 @@
         {{ $introduction_text ?? '' }}
     </div>
 </div>
+
+
+<form action="{{ route('locale.switch') }}" method="POST" class="ml-4 inline-block">
+    @csrf
+    <button type="submit" name="locale" value="{{ app()->getLocale() === 'en' ? 'nl' : 'en' }}"
+        class="px-3 py-1 rounded border text-sm hover:bg-gray-100 transition">
+        {{ app()->getLocale() === 'en' ? 'NL' : 'EN' }}
+    </button>
+</form>
+<br>
