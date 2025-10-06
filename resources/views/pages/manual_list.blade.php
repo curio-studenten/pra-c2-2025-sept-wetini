@@ -27,10 +27,10 @@
     @foreach ($manuals as $manual)
 
         @if ($manual->locally_available)
-            <a class="manual-button" onclick="trackClick({{ $manual->id }})" href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+            <a class="manual-button" onclick="trackClick('{{ $manual->id }}')" href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
             ({{$manual->filesize_human_readable}})
         @else
-            <a class="manual-button" onclick="trackClick({{ $manual->id }})" href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
+            <a class="manual-button" onclick="trackClick('{{ $manual->id }}')" href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
     @endif
     @endforeach
 </div>
