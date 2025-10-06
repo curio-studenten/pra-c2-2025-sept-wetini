@@ -3,28 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class LocaleController extends Controller
 {
-    public function changeLocale($language_slug, Request $request)
+    public function switch(Request $request)
     {
-        // Allowed languages
-        $allowed_languages = array('nl','en');
+        $locale = $request->input('locale');
 
-        if( in_array($language_slug, $allowed_languages) )
-        {
-            $request->session()->put('locale', $language_slug);
+        if (!in_array($locale, ['en', 'nl'])) {
+            $locale = config('app.locale'); // fallback
         }
 
-        return redirect()->route('home');
-    }
-    /* public function changeLocale(Request $request)
-    {
-
-        $this->validate($request, ['locale' => 'required|in:nl,en']);
-
-        \Session::put('locale', $request->locale);
+        session(['locale' => $locale]);
+        App::setLocale($locale);
 
         return redirect()->back();
-    } */
+    }
 }
