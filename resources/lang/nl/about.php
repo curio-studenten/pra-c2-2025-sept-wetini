@@ -14,7 +14,7 @@ return [
     */
 
     'about_title' => "Over ons",
-    'contactform_link' => "Om direct met ons contact op te nemen, kan dit <a href=':url'>hier</a>",
+    'contactform_link' => " Om direct met ons contact op te nemen, kan dit <a href=':url'>hier</a>",
     'socials' => "Onze socials",
     'about_content' => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, accusantium unde vitae dignissimos nobis reiciendis assumenda aliquid amet beatae corrupti blanditiis ea molestiae inventore iste explicabo qui dolorem earum, nulla sequi sit voluptatem. Dignissimos, quis necessitatibus, minima aliquam qui veniam soluta reprehenderit, tempora maiores dolores veritatis optio repellat porro quaerat?",
 ];
