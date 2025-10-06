@@ -41,7 +41,7 @@ use App\Models\Manual;
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
     $suggestedBrand = Brand::inRandomOrder()->first();
-    $popularManuals = Manual::all()->sortBy('views')->take(10);
+    $popularManuals = Manual::all()->sortByDesc('views')->take(10);
     return view('pages.homepage', compact('brands'))->with("suggestedBrand", $suggestedBrand)->with("popularManuals", $popularManuals);
 })->name('home');
 
