@@ -66,12 +66,19 @@ body {
 }
 
 footer {
-width: 99%;
+width: 100%;
 text-align: center;
 background-color: #343a40;
 color: white;
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
+padding-right: 10%;
+}
+
+footer .about-us {
+    width: 20%;
+    margin-left: 10%;
+    font-size: 12px;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
