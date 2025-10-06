@@ -9,7 +9,7 @@ class ViewCounterController extends Controller
 {
     public function index($id)
     {
-        $manual = Manual::findOrFail($id);;
+        $manual = Manual::findOrFail($id);
 
         $manual->views++;
 
